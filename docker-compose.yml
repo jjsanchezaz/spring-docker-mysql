@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  spring-docker-mysql:
+    image: spring-docker-mysql
+    container_name: spring-docker-mysql
+    ports:
+      - "8080:8080"
+      - "7080:7080"
+    depends_on:
+      - dbmysql
+    networks:
+      - net
+
+  dbmysql:
+    image: mysql
+    container_name: dbmysql
+    volumes:
+      - ~/mysql/data:/var/lib/mysql
+    ports:
+      - "8079:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    networks:
+      - net
+
+networks:
+  net:
