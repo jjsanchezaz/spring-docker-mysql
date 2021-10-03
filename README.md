@@ -28,7 +28,7 @@ It creates the `dbmysql` and `spring-docker-mysql` containers in the same networ
 ```bash
 CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                                            NAMES
 91a222fee55a        spring-docker-mysql     "java -Xdebug -Xrunj…"   6 minutes ago       Up 6 minutes        0.0.0.0:7080->7080/tcp, 0.0.0.0:8080->8080/tcp   spring-docker-mysql
-39df3ad6e3ce        mysql                   "docker-entrypoint.s…"   4 weeks ago         Up 6 minutes        0.0.0.0:5432->5432/tcp                           dbmysql
+39df3ad6e3ce        mysql                   "docker-entrypoint.s…"   4 weeks ago         Up 6 minutes        0.0.0.0:8079->3306/tcp                           dbmysql
 ```
 
 ## Modules
